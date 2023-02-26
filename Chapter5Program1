@@ -1,0 +1,22 @@
+
+def main():
+    choice = int(input('1. Mario \n 2. Steve \n 3. Niko Bellic \n 4. Arthur Morgan \n 5. Kratos \n Choose an Option: '))
+    character(choice)
+
+
+def character(x):
+    if x == 1:
+        print('‘Mario is from Super Mario Bros \n Released September 13, 1985')
+    elif x == 2:
+        print('Steve is from Minecraft \n Released November 2011')
+    elif x == 3:
+        print('Niko Bellic is from Grand Theft Auto 5 \n Released September 17, 2013')
+    elif x == 4:
+        print('Arthur Morgan is from Red Dead Redemption \n Released may 18, 2010')
+    elif x == 5:
+        print('Kratos is from God of War \n Released march 22, 2005')
+    else:
+        print('That is not an option')
+
+
+main()
