@@ -1,0 +1,16 @@
+number_file = open('numbers.txt', 'r')
+
+line = number_file.readline()
+total = 0
+count = 0
+
+while line != '':
+    num = float(line)
+    print(f'{num:.2f}')
+    total += num
+    count += 1
+    line = number_file.readline()
+
+print(f'The total is: ${total:.2f}')
+print(f'The number of entries is: {count}')
+print(f'The average is: ${(total / count):.2f}')
