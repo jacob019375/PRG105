@@ -1,0 +1,16 @@
+
+number_of_people = int(input('Enter the number of people you want to record:  '))
+
+for i in range(number_of_people):
+    name = input('Enter the name: ')
+    email = input('Enter the email: ')
+    address = input('Enter the address: ')
+    file = open('info.txt', 'w')
+
+    file.write(name + '\n')
+    file.write(email + '\n')
+    file.write(address + '\n')
+    file.close()
+
+
+file = open('info.txt', 'r')
