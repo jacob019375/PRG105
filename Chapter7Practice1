@@ -1,0 +1,19 @@
+
+def grades():
+    class_size = int(input('Enter the number of students: '))
+    info = []
+
+    for i in range(class_size):
+        f = open('books.txt', 'w')
+        grade = input('Enter a letter grade: ')
+        name = input('Enter the student name: ')
+        info.append([grade, name])
+
+        list1 = str(info)
+        f.write(list1)
+        x = f.readlines()
+        print(x)
+        f.close()
+
+
+grades()
