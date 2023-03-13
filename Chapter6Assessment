@@ -1,0 +1,34 @@
+number = open('numbers.txt', 'r')
+data_name = input('Enter the name of the file:')
+
+
+def calculate():
+    total = 0
+    count = 0
+    line = number.readline()
+    num = float(line)
+    while line != '':
+        try:
+            print(line)
+            count += 1
+            total += num
+            continue
+        except ValueError:
+            print(f'line {count} with value {line} is invalid)')
+            count -= 1
+            total -= num
+        break
+
+    print(f'Total is: {total}')
+    print(f'Number of entries: {count}')
+    print(f'Average: {total / count}')
+
+
+try:
+    if data_name == 'numbers.txt':
+        calculate()
+    else:
+        print(f'unable to access {data_name}')
+
+except ValueError:
+    print(f'unable to access {data_name}')
