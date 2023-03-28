@@ -1,5 +1,4 @@
 
-
 def main():
     alpha = ['a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F', 'g', 'G', 'h', 'H', 'I', 'i', 'j', 'J', 'k', 'K', 'l', 'L', 'm', 'M',
              'n', 'N', 'o', 'O', 'p', 'P', 'Q', 'q', 'r', 'R', 's', 'S', 't', 'T', 'u', 'U', 'v', 'V', 'w', 'W', 'x', 'X', 'y', 'Y', 'z', 'Z']
@@ -9,18 +8,21 @@ def main():
     phrase = input('Enter a phrase: ')
     f = open('file.txt', 'a')
     codedphrase = ''
+    outline = []
 
     for i in phrase:
-        for item in range(0, len(alpha)):
-            if i == alpha[item]:
-                codedphrase += code[item]
-                for letter in codedphrase:
-                    list1 = []
-                    list1.append(letter)
-                    f.write(letter + '\n')
+        letter_index = alpha.index(i)
+        code_value = code[letter_index]
+        outline.append(code_value)
+
+    f = open('file.txt', 'a')
+    for item in outline:
+        f.write(str(item) + '\n')
+    f.close()
 
     print(codedphrase)
-    print(list1)
+    print(outline)
 
 
 main()
+
