@@ -1,0 +1,15 @@
+
+def main():
+    phrase = str(input('Enter a three word phrase to be converted: '))
+    list = phrase.split()
+    acronym = []
+    for item in list:
+        x = item[0].upper()
+        acronym.append(x)
+
+    print(f'{acronym[0] + acronym[1] + acronym[2]}')
+
+
+
+
+main()
