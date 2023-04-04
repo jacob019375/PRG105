@@ -21,6 +21,7 @@ def main():
             total.append(index[0])
         except ValueError:
             del index[0]
+            count -= 1
 
     average = sum(total) / count
     print(f'The average rainfall for {count} months is: {average}')
