@@ -1,0 +1,29 @@
+
+
+def main():
+    f = open('rainfall-totals.txt', 'r')
+    count = 0
+    total = []
+    lines = f.readlines()
+    for item in lines:
+        count += 1
+        item.rstrip('\n')
+
+    numbers = [item.split() for item in lines]
+
+    for index in numbers:
+        del index[0]
+
+    for index in numbers:
+        try:
+            float(index[0])
+            print(index[0])
+            total.append(index[0])
+        except ValueError:
+            del index[0]
+
+    average = sum(total) / count
+    print(f'The average rainfall for {count} months is: {average}')
+
+
+main()
