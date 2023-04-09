@@ -1,0 +1,21 @@
+def main():
+    accounts = open('accounts.txt', 'r')
+    overdue = open('over90.txt', 'r')
+    list1 = accounts.readlines()
+    overdue_accounts = overdue.readlines()
+    account_info = [item.split() for item in list1]
+
+    for i in list1:
+        i.rstrip('\n')
+
+    for i in overdue_accounts:
+        i.rstrip('\n')
+        print(i)
+        for index in account_info:
+            if index[0] == i:
+                print('yes')
+
+    account_info = [item.split() for item in list1]
+
+
+main()
