@@ -1,0 +1,19 @@
+def main():
+    steps = {'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5, 'Saturday': 6, 'Sunday': 7}
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    total = 0
+
+    for i in days:
+        number_of_steps = int(input(f'Enter the number of steps on {i}:'))
+        steps[i] = number_of_steps
+        total += number_of_steps
+
+    x = max(steps.values())
+    y = min(steps.values())
+
+    print(f'The average number of steps this week was: {total / 7:.2f}')
+    print(f'The maximum number of steps this week was: {x}')
+    print(f'The minimum number of steps this week was: {y}')
+
+
+main()
