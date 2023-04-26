@@ -1,0 +1,28 @@
+
+def main():
+    language = {'uno': 'one', 'dos': 'two', 'tre': 'three', 'quattro': 'four', 'cinque': 'five', 'sei': 'six',
+            'sette': 'seven', 'otto': 'eight', 'nove': 'nine', 'dieci': 'ten'}
+    scores = {'A+':10, 'A':9, 'B':8, 'C':7, 'D':6}
+
+    score = 10
+
+    for i in language:
+        answer = input(f'what is the equivalent of {language[i]}:')
+        if answer == language.get(i):
+            print('Correct')
+            score += 1
+        else:
+            print('Incorrect')
+            score -= 1
+
+    print(f'The final score is {score}/10')
+
+    for i in scores:
+        if scores[i] == score:
+            print(scores[i])
+
+    if score < 6:
+        print('F')
+
+
+main()
