@@ -1,0 +1,24 @@
+
+def main():
+    file = open("tale_of_two_cities (1).txt", 'r')
+    word = dict()
+    words = []
+    count = 0
+
+    for line in file:
+        line = file.readline()
+        words = [line.strip() for line in file]
+
+    word_set = set(words)
+
+    for item in word_set:
+        if item == words:
+            count += 1
+            word[item] = count
+
+    for key, value in word.items():
+        if value == 1:
+            print(f'The unique word is: {key}')
+
+
+main()
