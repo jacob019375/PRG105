@@ -1,0 +1,37 @@
+
+
+
+class Data:
+    def __init__(self, name, phone, address, age):
+        self.name = name
+        self.phone = phone
+        self.address = address
+        self.age = age
+
+    def get_name(self):
+        return self.name
+
+    def get_phone(self):
+        return self.phone
+
+    def get_address(self):
+        return self.address
+
+    def get_age(self):
+        return self.age
+
+friend = Data('Mindy Johnson', '763-234-8923', 'Chicago, IL', 39)
+family = Data('Hank Fritz', '542-234-8345', 'San Francisco, CA', 46)
+personal = Data('Joe Schmidt', '856-930-5420', '335 Windy Lane', 45)
+
+print(f'{friend.get_name()}, {friend.get_age()}')
+print(f'{friend.get_address()}')
+print(f'{friend.get_phone()} \n')
+
+print(f'{family.get_name()}, {family.get_age()}')
+print(f'{family.get_address()}')
+print(f'{family.get_phone()} \n')
+
+print(f'{personal.get_name()}, {personal.get_age()}')
+print(f'{personal.get_address()}')
+print(f'{personal.get_phone()} \n')
