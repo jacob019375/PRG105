@@ -1,0 +1,72 @@
+
+class Question:
+    def __init__(self, question, correct_answer, answer1, answer2, answer3):
+        self.question = question
+        self.correct_answer = correct_answer
+        self.answer1 = answer1
+        self.answer2 = answer2
+        self.answer3 = answer3
+
+
+def main():
+    score1 = 0
+    score2 = 0
+    question1 = Question('Ray charles was famous for playing which instrument?', 'Piano', 'Guitar', 'Violin', 'Drums')
+    question2 = Question('Pickles start out as which vegetable?', 'Cucumber', 'Carrots', 'bell Pepper', 'Broccoli')
+    question3 = Question('What month was Julius Caesar stabbed in?', 'March', 'September', 'June', 'August')
+    question4 = Question('What is your body’s largest organ?', 'Skin', 'Lungs', 'Brains', 'Heart')
+    question5 = Question('In which language does "konnichiwa" mean "hello"?', 'Japanese', 'Chinese', 'German', 'Spanish')
+    question6 = Question('How many oceans are there on Earth?', 'Five', 'Eight', 'Ten', 'Six')
+    question7 = Question('What color is chlorophyll?', 'Green', 'Orange', 'Red', 'Yellow')
+    question8 = Question('How many people have walked on the moon?', '12', '2', '30', '8')
+    question9 = Question('What year was the first model of the Iphone Released?', '2007', '2001', '1999', '2010')
+    question10 = Question('Which planet is the hottest in the solar system?', 'Venus', 'Pluto', 'Jupiter', 'Saturn')
+
+
+    questions_player1 = [question1, question2, question3, question4, question5]
+    questions_player2 = [question6, question7, question8, question9, question10]
+
+
+    for i in range(5):
+        print(f'Question #{i+1}: {questions_player1[i].question} \n '
+              f'#1: {questions_player1[i].correct_answer} \n '
+              f'#2: {questions_player1[i].answer1} \n '
+              f'#3: {questions_player1[i].answer2} \n '
+              f'#4: {questions_player1[i].answer3}')
+        player1 = input('Enter your answer: ')
+        if player1 == questions_player1[i].correct_answer:
+            print('Correct')
+            score1 += 1
+        elif player1 != questions_player1[i].correct_answer:
+            print('Incorrect')
+            score1 -= 1
+
+    for i in range(5):
+        print(f'Question #{i+1}: {questions_player2[i].question} \n '
+              f'#1: {questions_player2[i].correct_answer} \n '
+              f'#2: {questions_player2[i].answer1} \n '
+              f'#3: {questions_player2[i].answer2} \n '
+              f'#4: {questions_player2[i].answer3}')
+
+        player2 = input('Enter your answer: ')
+        if player2 == questions_player2[i].correct_answer:
+            print('Correct')
+            score2 += 1
+        elif player2 != questions_player2[i].correct_answer:
+            print('Incorrect')
+            score2 -= 1
+
+
+    print(f'Player 1 Score: {score1} \n PLayer 2 Score: {score2}')
+    if score1 > score2:
+        print('Player 1 won the game')
+    elif score2 > score1:
+        print('Player 2 won the game')
+    elif score2 == score1:
+        print('Player 2 and Player 1 tied this game')
+
+
+
+
+
+main()
