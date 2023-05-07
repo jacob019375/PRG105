@@ -1,0 +1,26 @@
+
+
+class Movies:
+    def __init__(self, title, release_year, story_year):
+        self.title = title
+        self.release_year = release_year
+        self.story_year = story_year
+
+def main():
+
+    movies = []
+    file = open('MarvelMovies.csv', 'r')
+
+    for line in file:
+        new_line = line.strip().split(',')
+        movie = Movies(new_line[0], new_line[1], new_line[2])
+        movies.append(movie)
+
+    alphabetical_list = sorted(movies)
+
+    print(f'Title:               Release Year:                  Story Year:               ')
+    for i in alphabetical_list:
+        print(f'Title: {i.title} Release Year: {i.release_year} Story Year: {i.story_year}')
+
+
+main()
